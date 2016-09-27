@@ -16,4 +16,6 @@ RUN mkdir /etc/service/turnserver
 ADD turnserver.sh /etc/service/turnserver/run
 RUN chmod +x /etc/service/turnserver/run
 
+RUN apt-get install net-tools -y
+
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
